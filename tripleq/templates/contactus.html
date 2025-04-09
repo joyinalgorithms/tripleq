@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %} Contact Us {% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/static/styles/contactus.css">
+{% endblock %}
+
+{% block main %}
+    <img class="background-image" src="/static/images/bg5.jpg" alt="">
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Have a question or need expert construction services? Get in touch with Triple Q Construction! Whether you’re looking for professional architectural and engineering solutions or need assistance with building permits, we’re here to help. Reach out to us via phone, email, or visit our office. We look forward to working with you!</p>
+    </div>
+
+    <div class="contactdetails-container">
+        <div class="details-container">
+            <img class="icon-image" src="/static/icons/location.png" alt="">
+            <p>{{ contact.address | safe }}</p>
+        </div>
+        <div class="details-container">
+            <img class="icon-image" src="/static/icons/phone-call.png" alt="">
+            <p>{{ contact.phone | safe }}</p>
+        </div>
+        <div class="details-container">
+            <img class="icon-image" src="/static/icons/mail.png" alt="">
+            <p>{{ contact.email | safe }}</p>
+        </div>
+        <div class="details-container">
+            <img class="icon-image" src="/static/icons/clock.png" alt="">
+            <p>{{ contact.office_hours | safe }}</p>
+        </div>
+    </div>
+{% endblock %}
